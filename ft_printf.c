@@ -6,11 +6,11 @@ static int  ft_format_control(char fs, va_list args)
 
     i = 0;
     if (fs == 'c')
-        return (ft_putchar(va_arg(*args, int)));
+        return (ft_putchar_fd(va_arg(*args, int)));
     else if (fs == 'd' || fs == 'i')
-        return (ft_putnbr(va_arg(*args, int)));
+        return (ft_putnbr_fd(va_arg(*args, int)));
     else if (fs == 's')
-        return (ft_putstr(va_arg(*args, char *)));
+        return (ft_putstr_fd(va_arg(*args, char)));
     else if (fs == 'p')
         return (ft_putptr(va_arg(*args, int)));
     else if (fs == 'u')
@@ -20,7 +20,7 @@ static int  ft_format_control(char fs, va_list args)
     else if (fs == 'X') 
         return (ft_puthex(va_arg(*args, int))) ;
     else if (fs == '%')
-        return (ft_putchar('%'));
+        return (ft_putchar_fd('%'));
     return (i);
 }
 
@@ -29,11 +29,4 @@ int ft_printf(const char*, ...)
 {
 
 }
-/*
-int ft_putchar(va_list,args)
-{
-    char a;
-    a = (char)va_arg(args, int);
-    return (write(1, &a, 1));
-}
-*/
+
