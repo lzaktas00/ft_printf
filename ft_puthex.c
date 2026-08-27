@@ -6,11 +6,27 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/08/27 16:04:59 by username         #+#    #+#              */
-/*   Updated: 2026/08/27 16:14:12 by username        ###   ########.fr        */
+/*   Updated: 2026/08/27 16:54:52 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int	ft_put_sign(long long nb)
+{
+	int	rtn;
+
+	rtn = 0;
+	if (nb < 0)
+	{
+		rtn += ft_putchar('-');
+		nb = (unsigned int)(-nb);
+	}
+	else
+		nb = (unsigned int) nb;
+	rtn += ft_putnbr_base((unsigned long long) nb, "0123456789", 10);
+	return (rtn);
+}
 
 int	ft_puthex(char fs, unsigned long long nb)
 {
@@ -25,17 +41,13 @@ int	ft_puthex(char fs, unsigned long long nb)
 		rtn += ft_putnbr_base(nb, "0123456789abcdef", 16);
 	}
 	else if (fs == 'd' || fs == 'i')
-	{
-		if (((fs == 'd' || fs == 'i') && (int) nb < 0))
-		{
-			rtn += ft_putchar('-');
-			nb = -(int) nb;
-		}
-		rtn += ft_putnbr_base(nb, "0123456789", 10);
-	}
+		rtn += ft_put_sign((int) nb);
 	else if (fs == 'x')
 		rtn += ft_putnbr_base(nb, "0123456789abcdef", 16);
 	else if (fs == 'X')
 		rtn += ft_putnbr_base(nb, "0123456789ABCDEF", 16);
+	else if (fs == 'u')
+		rtn += ft_putnbr_base(nb, "0123456789", 10);
 	return (rtn);
 }
+0
