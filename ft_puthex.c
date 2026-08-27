@@ -6,7 +6,7 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/08/27 16:04:59 by username         #+#    #+#              */
-/*   Updated: 2026/08/27 16:54:52 by username        ###   ########.fr        */
+/*   Updated: 2026/08/27 17:11:37 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ int	ft_puthex(char fs, unsigned long long nb)
 		rtn += ft_putnbr_base(nb, "0123456789", 10);
 	return (rtn);
 }
-0
