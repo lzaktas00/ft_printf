@@ -14,7 +14,7 @@ int ft_puthex(char fs, unsigned long long nb)
     }
     else if (fs == 'd' || fs == 'i')
     {
-        if ((long long)nb < 0)
+        if ((int)nb < 0)
         {
             rtn += ft_putchar('-');
             nb = -(long long)nb;

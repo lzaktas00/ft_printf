@@ -11,11 +11,11 @@ static int  ft_format_control(char fs, va_list *args)
     else if (fs == 'p')
         return (ft_puthex(fs, (va_arg(*args, unsigned long long int))));
     else if (fs == 'u')
-        return (ft_puthex(fs, (va_arg(*args, int))));
+        return (ft_puthex(fs, (va_arg(*args, unsigned int))));
     else if (fs == 'x')
-       return (ft_puthex(fs, (va_arg(*args, int))));
+       return (ft_puthex(fs, (va_arg(*args, unsigned int))));
     else if (fs == 'X') 
-       return (ft_puthex(fs, (va_arg(*args, int))));
+       return (ft_puthex(fs, (va_arg(*args, unsigned int))));
     else if (fs == '%')
         return (ft_putchar('%'));
     return (0);
