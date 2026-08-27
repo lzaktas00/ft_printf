@@ -29,7 +29,7 @@ The project relies on a stream-parsing algorithm that sequentially scans the inp
 
 ## Instructions
 ### Compilation
-The library compiles into a file named `libftprintf.a` at the root of the repository. You must use the `ar` command instead of `libtool`.
+The library compiles into a file named `libftprintf.a` at the root of the repository. You must use the `ar` command.
 
 Compile the library using the provided `Makefile` rules:
 
@@ -59,7 +59,7 @@ int main(void)
 Compile your application along with the static library:
 
 ```bash
-cc main.c -L. -lftprintf -o my_program
+cc main.c -L. -lftprintf -o program
 ```
 
 ## References

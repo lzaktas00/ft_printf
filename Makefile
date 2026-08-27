@@ -1,7 +1,12 @@
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SOURCE = ft_printf.c
+SOURCE		= ft_printf.c \
+              ft_putchar.c \
+              ft_putstr.c \
+              ft_puthex.c \
+              ft_putnbr_base.c
+
 OBJ = $(SOURCE:.c=.o)
 
 all: $(NAME)
