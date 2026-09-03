@@ -62,7 +62,7 @@ Compile your application along with the static library:
 cc main.c -L. -lftprintf -o program
 ```
 
-## References
+## Resources
 * [C Variadic Functions Documentation](https://cppreference.com) — Reference guide for handling variable arguments with `<stdarg.h>`.
 * [The Linux man-pages for printf(3)](https://man7.org) — Comprehensive official manual for expected behavior and formatting specifications.
-* AI was exclusively utilized to structure and format this Markdown README file, fix layout constraints, and ensure clean structural explanations for the algorithm description.
+* AI USAGE: AI was exclusively utilized to structure and format this Markdown README file, fix layout constraints, and ensure clean structural explanations for the algorithm description.
