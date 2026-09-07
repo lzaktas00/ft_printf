@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: liaktas@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/27 17:26:59 by liaktas           #+#    #+#             */
-/*   Updated: 2026/08/27 17:27:49 by liaktas          ###   ########.fr       */
+/*   Created: 2026/08/27 17:26:59 by username          #+#    #+#             */
+/*   Updated: 2026/09/07 17:49:51 by liaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ static int	ft_put_sign(long long nb)
 	if (nb < 0)
 	{
 		rtn += ft_putchar('-');
-		nb = (unsigned int)(-nb);
+		nb = -nb;
 	}
-	else
-		nb = (unsigned int) nb;
 	rtn += ft_putnbr_base((unsigned long long) nb, "0123456789", 10);
 	return (rtn);
 }

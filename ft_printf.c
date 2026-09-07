@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: liaktas@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/27 17:26:59 by liaktas           #+#    #+#             */
-/*   Updated: 2026/08/27 17:27:04 by liaktas          ###   ########.fr       */
+/*   Created: 2026/08/27 17:26:59 by username          #+#    #+#             */
+/*   Updated: 2026/09/07 17:53:54 by liaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	ft_printf(const char *str, ...)
 	va_list	args;
 	int		rtn;
 
+	if (!str)
+		return (-1);
 	va_start(args, str);
 	rtn = 0;
 	while (*str)
