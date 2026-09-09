@@ -6,7 +6,7 @@
 /*   By: liaktas@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 17:26:59 by username          #+#    #+#             */
-/*   Updated: 2026/09/07 17:53:54 by liaktas          ###   ########.fr       */
+/*   Updated: 2026/09/09 18:00:19 by liaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,13 @@ static int	ft_format_control(char fs, va_list *args)
 		return (ft_puthex(fs, (va_arg(*args, unsigned int))));
 	else if (fs == 'X')
 		return (ft_puthex(fs, (va_arg(*args, unsigned int))));
-	else if (fs == '%')
-		return (ft_putchar('%'));
+	else if (fs == '/')
+	{
+		int	a = va_arg(*args, int);
+		int	b = va_arg(*args, int);
+
+		return (ft_puthex(fs, a / b));
+	}
 	return (0);
 }
 

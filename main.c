@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liaktas@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/27 17:26:59 by username          #+#    #+#             */
-/*   Updated: 2026/09/09 17:25:16 by liaktas          ###   ########.fr       */
+/*   Created: 2026/09/09 17:34:15 by username          #+#    #+#             */
+/*   Updated: 2026/09/09 17:59:31 by liaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include <stdio.h>
+#include <limits.h>
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-
-int	ft_printf(const char *str, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *str);
-int	ft_putnbr_base(unsigned long long nb, char *base, int base_len);
-int	ft_puthex(char fs, unsigned long long nb);
-
-#endif
+int	main(void)
+{
+	ft_printf("%/", 40, 4);
+	return (0);
+}

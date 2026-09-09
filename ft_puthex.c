@@ -6,11 +6,12 @@
 /*   By: liaktas@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 17:26:59 by username          #+#    #+#             */
-/*   Updated: 2026/09/07 17:49:51 by liaktas          ###   ########.fr       */
+/*   Updated: 2026/09/09 17:59:05 by liaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int	ft_put_sign(long long nb)
 {
@@ -45,6 +46,8 @@ int	ft_puthex(char fs, unsigned long long nb)
 	else if (fs == 'X')
 		rtn += ft_putnbr_base(nb, "0123456789ABCDEF", 16);
 	else if (fs == 'u')
+		rtn += ft_putnbr_base(nb, "0123456789", 10);
+	else if (fs == '/')
 		rtn += ft_putnbr_base(nb, "0123456789", 10);
 	return (rtn);
 }
